@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GameForge — Gaming Community</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#home"><span class="mark">GF</span><span>GAME<i>FORGE</i></span></a>
+  <nav class="links" id="links"><a href="#games">Games</a><a href="#community">Community</a><a href="#events">Events</a><a href="#leaderboard">Leaderboard</a></nav>
+  <button class="btn" id="dmBtn" data-a="dms" hidden>Messages</button>
+  <button class="btn" id="authBtn" data-a="join">Join community</button>
+  <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
+</header>
+<main id="home">
+<section class="hero">
+  <div>
+    <div class="kick"><span class="pulse"></span><span id="online">24,892</span> PLAYERS ONLINE</div>
+    <h1>PLAY MORE.<br><span>CONNECT MORE.</span><br>WIN TOGETHER.</h1>
+    <p>Discover games, build squads, post clips, join tournaments and climb the leaderboard. Create a free account and earn XP for everything you do.</p>
+    <div class="acts"><button class="pri" data-a="join" id="heroBtn">Enter the Forge</button><a href="#games" class="btn">Explore games</a></div>
+    <div class="stats"><div><b id="sMem">48K+</b><small>Members</small></div><div><b id="sSq">0</b><small>Active squads</small></div><div><b id="sEv">0</b><small>Live events</small></div></div>
+  </div>
+  <div class="hcard"><div class="kick">FEATURED SQUAD</div><h3>NIGHT RAIDERS</h3><p style="color:#8e97a5">Competitive Valorant, 9 online</p><div style="margin-top:28px"><button class="dk" data-a="sq" data-g="Valorant">Find a Valorant squad</button></div></div>
+</section>
+
+<section class="sec" id="games">
+  <div class="head"><div><span class="kick">DISCOVER</span><h2>Your next game</h2></div></div>
+  <div class="tools"><input class="in" id="gq" placeholder="Search games" style="max-width:260px" aria-label="Search games"><div id="gchips" style="display:flex;gap:8px;flex-wrap:wrap"></div></div>
+  <div class="grid" id="ggrid"></div>
+</section>
+
+<section class="sec" id="community">
+  <div class="head"><div><span class="kick">COMMUNITY</span><h2>What the Forge is talking about</h2></div><button class="btn" data-a="newpost">+ New post</button></div>
+  <div class="tools" id="pchips"></div>
+  <div class="lay"><div class="feed" id="feed"></div>
+  <aside class="box side"><span class="kick">TRENDING GAMES</span><div id="trend"></div></aside></div>
+</section>
+
+<section class="sec" id="events">
+  <div class="head"><div><span class="kick">UP NEXT</span><h2>Events &amp; tournaments</h2></div><button class="btn" data-a="cal">My calendar</button></div>
+  <div class="evs" id="evs"></div>
+</section>
+
+<section class="sec" id="leaderboard">
+  <div class="head"><div><span class="kick">COMPETE</span><h2>Leaderboard</h2></div><div class="tabs" id="ltabs"><button class="on" data-p="w">Week</button><button data-p="m">Month</button><button data-p="a">All time</button></div></div>
+  <div class="box tw"><table><thead><tr><th>#</th><th>Player</th><th>Wins</th><th>K/D</th><th>XP</th><th>Rank</th></tr></thead><tbody id="lb"></tbody></table></div>
+</section>
+
+<section class="cta"><div><span class="kick">THE FORGE IS OPEN</span><h2>Your squad is waiting.</h2><p>Post, join squads and enter events to earn XP and move up the board.</p></div><button class="pri" data-a="join" id="ctaBtn">Create your profile</button></section>
+</main>
+<footer><div class="brand"><span class="mark">GF</span><span>GAME<i>FORGE</i></span></div><small>© 2026 GameForge Community. Built for players.</small></footer>
+<div class="mod" id="mod" role="dialog" aria-modal="true"><div class="mb"><button class="x" data-a="close" aria-label="Close">×</button><div id="mbody"></div></div></div>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
